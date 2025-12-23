@@ -1,0 +1,38 @@
+models:
+  - name: mrt_localbike__max_amount_sales
+    description: "This model contains key indicators for stores, employees, customers, brands, categories, and products that generate the most sales and the highest sales."
+    columns:
+      - name: dimension
+        description: "Analysis axis for KPIs"
+        tests:
+            - unique
+            - not_null
+      - name: id
+        description: "id of dimension for which sales are highest in quantity and amount"
+      - name: name
+        description: "name of dimension for which sales are highest in quantity and amount"
+      - name: last_name
+        description: "last name of dimension (for customer and staff) for which sales are highest in quantity and amount"
+      - name: max_quantity_sales
+        description: "highest number of sales"
+      - name: max_total_amount
+        description: "highest sales amount without discounts"
+      - name: max_discount_amount
+        description: "highest sales amount with discounts"
+
+  - name: mrt_localbike__max_count_orders
+    description: "This model contains key indicators for stores, employees, customers, brands, categories, and products that generate the most sales and the highest sales."
+    columns:
+      - name: dimension
+        description: "Analysis axis for KPIs"
+        tests:
+            - unique
+            - not_null
+      - name: id
+        description: "id of dimension for which sales are highest in quantity and amount"
+      - name: name
+        description: "name of dimension for which sales are highest in quantity and amount"
+      - name: last_name
+        description: "last name of dimension (for customer and staff) for which sales are highest in quantity and amount"
+      - name: max_count
+        description: "the maximum number of orders"
