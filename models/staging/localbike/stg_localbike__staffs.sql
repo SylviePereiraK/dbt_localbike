@@ -7,4 +7,4 @@ select
     active AS staff_active,
     store_id,
     COALESCE(CAST(manager_id AS INT),0) AS manager_id
-from {{source('localbike','staffs')}}
+from {{source('')}}
