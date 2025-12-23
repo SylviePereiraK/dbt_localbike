@@ -36,24 +36,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  +persist_docs:
-      relation: true
-      columns: true
-      
   dbt_localbike:
-
     staging:
       +materialized: view
-      localbike:
-        +schema: stg_localbike
+      +schema: stg_localbike
+      +tags: ["daily"]
 
     intermediate:
       +materialized: view
-      localbike: 
-        +schema: int_localbike
+      +schema: int_localbike
+      +tags: ["daily"]
 
     mart:
       +materialized: table
-      localbike:
-        +schema: mrt_localbike
+      +schema: mrt_localbike
+      +tags: ["daily"]
 
